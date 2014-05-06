@@ -12,7 +12,7 @@ describe '#home' do
     expect(page).to have_link('Technology')
     expect(page).to have_link('Politics')
     expect(page).to have_link('Culture')
-    expect(page).to have_link('Economics')
+    expect(page).to have_link('Business')
     expect(page).to have_link('Meta')
   end
 end
