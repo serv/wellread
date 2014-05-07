@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   root 'pages#home'
+
+  resources :links do
+    member do
+      get 'more_info'
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

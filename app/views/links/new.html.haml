@@ -1,0 +1,17 @@
+.container
+  .row
+    .col-md-12
+      %h1 New Link
+  .row
+    .col-md-6
+      = form_for @link do |f|
+        .form-group
+          = f.label :title
+          = f.text_field :title, class: 'form-control'
+        .form-group
+          = f.label :url, 'URL'
+          = f.text_field :url, class: 'form-control'
+
+        = f.submit 'Submit', class: 'btn btn-primary'
+
+    .col-md-6
