@@ -1,0 +1,20 @@
+#footer
+  .container#footer-container
+    .row
+      .col-md-12
+        %ul#footer-navigation
+          %li.first= link_to app_name, root_path, :id => "footer-logo"
+          %li= link_to "About", '#'
+          %li= link_to "Help", '#'
+          %li= link_to "Contact", '#'
+
+    .row
+      .col-md-12
+        %p.text-muted
+          By using this site, you agree to the
+          = link_to "User Agreement", '#'
+          and
+          = link_to "Privacy Policy", '#'
+          \.
+          %br
+          © 2014 WellRead. All rights reserved.
