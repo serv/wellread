@@ -12,6 +12,11 @@
           = f.label :url, 'URL'
           = f.text_field :url, class: 'form-control'
 
+        = f.fields_for :authors do |authors_form|
+          .form-group
+            = authors_form.label :name, 'Author Name'
+            = authors_form.text_field :name, class: 'form-control'
+
         = f.submit 'Submit', class: 'btn btn-primary'
 
     .col-md-6

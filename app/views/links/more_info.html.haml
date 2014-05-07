@@ -8,10 +8,12 @@
           %tr
             %th Fields
             %th Values
+            %th Author
         %tbody
           %tr
             %td= @link.title
             %td= @link.url
+            %td= @link.authors.first.name
 
       %p Optional step to describe author
 
