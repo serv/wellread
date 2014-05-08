@@ -6,6 +6,16 @@ Rails.application.routes.draw do
       get 'more_info'
     end
   end
+
+  namespace :api do
+    namespace :v0 do
+      resources :authors, only: [] do
+        collection do
+          get 'search_by_name'
+        end
+      end
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -11,10 +11,12 @@ gem 'turbolinks'
 gem 'bootstrap-sass', '~> 3.1.1.1'
 gem 'haml-rails', '~> 0.5.3'
 gem 'thin', '~> 1.6.2'
+gem 'twitter-typeahead-rails', '~> 0.10.2'
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.14.2'
   gem 'capybara', '~> 2.2.1'
   gem 'shoulda', '~> 3.5.0'
+  gem 'poltergeist', '~> 1.5.0'
   gem 'debugger'
 end

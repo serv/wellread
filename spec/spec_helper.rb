@@ -5,6 +5,7 @@ require 'rspec/rails'
 require 'capybara/rails'
 require 'capybara/rspec'
 require 'shoulda/matchers'
+require 'capybara/poltergeist'
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
@@ -44,3 +45,6 @@ RSpec.configure do |config|
 
   config.include Capybara::DSL
 end
+
+# Running tests headlessly with phantomjs
+Capybara.javascript_driver = :poltergeist
