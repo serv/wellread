@@ -8,7 +8,8 @@ describe '#new' do
     author_name = 'Jason Kim'
     fill_in('Title', with: title)
     fill_in('URL', with: 'https://gist.github.com/zhengjia/428105')
-    fill_in('Author Name', with: 'Jason Kim')
+    fill_in('Author', with: 'Jason Kim')
+    fill_in('Category', with: 'Philosophy')
     click_button('Submit')
 
     expect(page).to have_content('More Information about the Link')

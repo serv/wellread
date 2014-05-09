@@ -14,6 +14,12 @@ Rails.application.routes.draw do
           get 'search_by_name'
         end
       end
+
+      resources :categories, only: [] do
+        collection do
+          get 'search_by_name'
+        end
+      end
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.

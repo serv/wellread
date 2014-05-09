@@ -14,9 +14,15 @@
 
         = f.fields_for :authors do |authors_form|
           .form-group
-            = authors_form.label :name, 'Author Name'
+            = authors_form.label :name, 'Author'
             .author-field
               = authors_form.text_field :name, class: 'typeahead form-control'
+
+        = f.fields_for :categories do |categories_form|
+          .form-group
+            = categories_form.label :name, 'Category'
+            .category-field
+              = categories_form.text_field :name, class: 'typeahead form-control'
 
         = f.submit 'Submit', class: 'btn btn-primary'
 
