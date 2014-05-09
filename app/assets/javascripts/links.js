@@ -4,6 +4,7 @@ ready = function() {
   if ($('#new-link').length > 0) {
     new AuthorTypeahead();
     new CategoryTypeahead();
+    toggleSuggestions();
   }
 
 };
@@ -53,3 +54,19 @@ var CategoryTypeahead = function() {
     source: linkCategories.ttAdapter()
   });
 }
+
+var toggleSuggestions = function() {
+  var selectors = [
+    {inputSelect: '#link_title', suggestSelect: '#selected-title'},
+    {inputSelect: '#link_url', suggestSelect: '#selected-url'},
+    {inputSelect: '.author-field input', suggestSelect: '#selected-author'},
+    {inputSelect: '.category-field input', suggestSelect: '#selected-category'}
+  ];
+
+  _.each(selectors, function(element){
+    $(element['inputSelect']).on('focus', function(){
+      $('#form-suggestion').children().hide();
+      $(element['suggestSelect']).show();
+    });
+  });
+};
