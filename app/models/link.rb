@@ -7,4 +7,10 @@ class Link < ActiveRecord::Base
 
   accepts_nested_attributes_for :authors
   accepts_nested_attributes_for :categories
+
+  validates :title, presence: true
+  validates :title, length: { maximum: 140 }
+  validates :url, presence: true
+  validates :url, length: { maximum: 2083 }
+  validates :url, uniqueness: true
 end
