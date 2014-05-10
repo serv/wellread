@@ -7,8 +7,7 @@ class LinksController < ApplicationController
 
   def create
     @link = Link.new(link_params)
-
-    if @link.save
+    if @link.carefully_save(link_params)
       redirect_to more_info_link_path(@link)
     else
       render 'new'
@@ -21,13 +20,13 @@ class LinksController < ApplicationController
 
   private
 
-  def link_params
-    params.require(:link)
-      .permit(
-        :title,
-        :url,
-        authors_attributes: [:name],
-        categories_attributes: [:name]
-      )
-  end
+    def link_params
+      params.require(:link)
+        .permit(
+          :title,
+          :url,
+          authors_attributes: [:name],
+          categories_attributes: [:name]
+        )
+    end
 end
