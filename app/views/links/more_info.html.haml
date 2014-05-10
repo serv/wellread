@@ -1,23 +1,36 @@
-.container
+.container#more-info
   .row
     .col-md-12
-      %h2 More Information about the Link
+      %h2 Thank you for submitting the link!
 
       %table.table
         %thead
           %tr
             %th Fields
             %th Values
-            %th Author
         %tbody
           %tr
-            %td= @link.title
-            %td= @link.url
+            %td Title
+            %td= link_to @link.title, @link.url
+          %tr
+            %td Author
             %td= @link.authors.first.name
+          %tr
+            %td Category
+            %td= @link.categories.first.name
 
-      %p Optional step to describe author
+      %h4 Tell us more about the post, so we can archive it better!
 
   .row
-    .col-md-6
+    .col-md-6.col-xs-6
+      = form_for @link, url: update_more_info_link_path(@link), method: :put do |f|
+        .form-group
+          = f.label :str_publication_date, 'Publication date'
+          .input-group.date
+            = f.text_field :str_publication_date, class: 'form-control', :'data-behavior' => 'datepicker'
+            %span.input-group-addon
+              %i.glyphicon.glyphicon-th
 
-    .col-md-6
+        = f.submit 'Submit', class: 'btn btn-primary'
+
+    .col-md-6.col-xs-6

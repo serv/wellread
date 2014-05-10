@@ -6,6 +6,9 @@ ready = function() {
     new CategoryTypeahead();
     toggleSuggestions();
   }
+  if ($('#more-info').length > 0) {
+    datePickerPublicationDate();
+  }
 
 };
 $(document).ready(ready);
@@ -68,5 +71,12 @@ var toggleSuggestions = function() {
       $('#form-suggestion').children().hide();
       $(element['suggestSelect']).show();
     });
+  });
+};
+
+var datePickerPublicationDate = function() {
+  $('.input-group.date').datepicker({
+    startView: 1,
+    todayBtn: true
   });
 };

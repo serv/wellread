@@ -23,7 +23,6 @@ class Link < ActiveRecord::Base
     begin
       self.save!
     rescue
-
       if !title.empty? && !url.empty?
         debugger
         copy = Link.new(title: title, url: url)
@@ -53,6 +52,15 @@ class Link < ActiveRecord::Base
         false
       end
     end # end rescue
+  end
+
+  def str_publication_date_to_datetime
+    date_to_array = str_publication_date.split('/')
+                                        .map {|d| d.to_i }
+    month = date_to_array[0]
+    day = date_to_array[1]
+    year = date_to_array[2]
+    self.publication_date = DateTime.new(year, month, day)
   end
 
 end

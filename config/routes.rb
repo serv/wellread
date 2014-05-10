@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :links do
     member do
       get 'more_info'
+      put 'update_more_info'
     end
   end
 

@@ -12,7 +12,7 @@ describe '#new' do
     fill_in('Category', with: 'Philosophy')
     click_button('Submit')
 
-    expect(page).to have_content('More Information about the Link')
+    expect(page).to have_content('Thank you for submitting the link!')
 
     link = Link.find_by(title: title)
 
