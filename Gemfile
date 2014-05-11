@@ -15,6 +15,7 @@ gem 'twitter-typeahead-rails', '~> 0.10.2'
 gem 'underscore-rails', '~> 1.6.0'
 gem 'bootstrap-datepicker-rails'
 gem 'capistrano', '~> 3.2.1'
+gem 'capistrano-rvm'
 gem 'capistrano-rails', '~> 1.1'
 gem 'unicorn', '~> 4.8.3'
 

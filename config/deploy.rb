@@ -14,6 +14,9 @@ set :scm, "git"
 set :repository, "git@github.com:serv/#{application}.git"
 set :branch, "master"
 
+# rvm
+set :rvm_type, :user                     # Defaults to: :auto
+set :rvm_ruby_version, '2.0.0-p451'      # Defaults to: 'default'
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
