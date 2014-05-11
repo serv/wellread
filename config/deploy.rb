@@ -12,6 +12,7 @@ set :use_sudo, false
 
 set :scm, "git"
 set :repository, "https://github.com/serv/wellread.git"
+set :scm_user, "serv"
 set :branch, "master"
 
 # rvm
