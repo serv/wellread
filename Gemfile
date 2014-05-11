@@ -17,7 +17,9 @@ gem 'bootstrap-datepicker-rails'
 gem 'capistrano', '~> 3.2.1'
 gem 'capistrano-rvm'
 gem 'capistrano-rails', '~> 1.1'
+gem 'capistrano-bundler'
 gem 'unicorn', '~> 4.8.3'
+
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.14.2'
