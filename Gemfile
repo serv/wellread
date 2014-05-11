@@ -14,6 +14,9 @@ gem 'thin', '~> 1.6.2'
 gem 'twitter-typeahead-rails', '~> 0.10.2'
 gem 'underscore-rails', '~> 1.6.0'
 gem 'bootstrap-datepicker-rails'
+gem 'capistrano', '~> 3.2.1'
+gem 'rvm-capistrano'
+gem 'unicorn', '~> 4.8.3'
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.14.2'

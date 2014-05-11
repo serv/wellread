@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: wellread_production
-  username: wellread
+  username: produ
   password: <%= ENV['WELLREAD_DATABASE_PASSWORD'] %>
