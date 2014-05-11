@@ -16,7 +16,6 @@ gem 'underscore-rails', '~> 1.6.0'
 gem 'bootstrap-datepicker-rails'
 gem 'capistrano', '~> 3.2.1'
 gem 'capistrano-rails', '~> 1.1'
-gem 'rvm-capistrano'
 gem 'unicorn', '~> 4.8.3'
 
 group :development, :test do
