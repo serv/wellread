@@ -11,7 +11,7 @@ set :deploy_via, :remote_cache
 set :use_sudo, false
 
 set :scm, "git"
-set :repository, "git@github.com:serv/#{application}.git"
+set :repository, "https://github.com/serv/wellread.git"
 set :branch, "master"
 
 # rvm
