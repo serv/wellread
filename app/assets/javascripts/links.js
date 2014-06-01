@@ -77,6 +77,6 @@ var toggleSuggestions = function() {
 var datePickerPublicationDate = function() {
   $('.input-group.date').datepicker({
     startView: 1,
-    todayBtn: true
+    todayBtn: false
   });
 };
