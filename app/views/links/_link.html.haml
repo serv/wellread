@@ -1,27 +1,28 @@
-.row.link-top-info
-  .col-md-8.link-title
-    = link.title
-  .col-md-3.link-author
-    by
-    - if link.authors.count > 0
-      = link_to link.authors.first.name, '#'
-    - else
-      Unknown
-  .col-md-1.link-year
-    - if link.str_publication_date
-      %span= pulication_year(link.str_publication_date)
-    - else
-      Unknown
-.row.link-bottom-info
-  .col-md-4.link-comments
-    = link_to '23 comments', '#'
-  .col-md-8.link-submission-info
-    .pull-right
-      submitted by
-      = link_to 'jsnk', '#'
-      to
-      - if link.categories.count > 0
-        = link_to link.categories.first.name, '#'
+.link
+  .row.link-top-info
+    .col-md-8.link-title
+      = link.title
+    .col-md-3.link-author
+      by
+      - if link.authors.count > 0
+        = link_to link.authors.first.name, '#'
       - else
-        Uncategorized
-      = time_ago_in_words(link.created_at) + ' ago'
+        Unknown
+    .col-md-1.link-year
+      - if link.str_publication_date
+        %span= pulication_year(link.str_publication_date)
+      - else
+        Unknown
+  .row.link-bottom-info
+    .col-md-4.link-comments
+      = link_to '23 comments', '#'
+    .col-md-8.link-submission-info
+      .pull-right
+        submitted by
+        = link_to 'jsnk', '#'
+        to
+        - if link.categories.count > 0
+          = link_to link.categories.first.name, '#'
+        - else
+          Uncategorized
+        = time_ago_in_words(link.created_at) + ' ago'
