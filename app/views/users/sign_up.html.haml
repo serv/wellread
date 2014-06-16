@@ -1,0 +1,21 @@
+.container#sign-up
+  .row
+    .col-md-12
+      %h1 Sign up!
+  .row
+    .col-md-6
+      = form_for @user do |f|
+        .form-group
+          = f.label :username
+          = f.text_field :username, class: 'form-control'
+        .form-group
+          = f.label :email
+          = f.text_field :email, class: 'form-control'
+        .form-group
+          = f.label :password
+          = f.text_field :password, class: 'form-control'
+        .form-group
+          = f.label :password_confirmation
+          = f.text_field :password_confirmation, class: 'form-control'
+        .form-group
+    .col-md-6
