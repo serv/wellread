@@ -8,6 +8,13 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :users do
+    collection do
+      get 'sign_up'
+      post 'sign_up_user'
+    end
+  end
+
   namespace :api do
     namespace :v0 do
       resources :authors, only: [] do
@@ -23,6 +30,8 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  get '/sign_up', to: 'users#sign_up'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
