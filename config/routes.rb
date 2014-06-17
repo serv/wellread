@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   resources :users do
     collection do
-      get 'sign_up'
+      get 'signup'
       post 'sign_up_user'
     end
   end
@@ -31,7 +31,7 @@ Rails.application.routes.draw do
     end
   end
 
-  get '/sign_up', to: 'users#sign_up'
+  get '/signup', to: 'users#signup'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

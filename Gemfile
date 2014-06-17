@@ -25,5 +25,6 @@ group :development, :test do
   gem 'capybara', '~> 2.2.1'
   gem 'shoulda', '~> 3.5.0'
   gem 'poltergeist', '~> 1.5.0'
+  gem 'factory_girl_rails', '~> 4.4.1'
   gem 'debugger'
 end
